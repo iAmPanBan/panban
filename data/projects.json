@@ -1,0 +1,775 @@
+[
+  {
+    "name": "wbs",
+    "title": "WBS",
+    "description": "Web platform for WBS, deployed on Vercel and maintained as the live production build.",
+    "category": "apps",
+    "stack": [
+      "JavaScript",
+      "Vercel"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": "https://wbs-eosin.vercel.app",
+    "created": "2025-12-12",
+    "updated": "2026-09-10"
+  },
+  {
+    "name": "Asset-Tracker",
+    "title": "Asset Tracker",
+    "description": "Internal tool for registering IT assets and tracking who holds what, where it is and its lifecycle status.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-09-09",
+    "updated": "2026-09-09"
+  },
+  {
+    "name": "Cascade",
+    "title": "Cascade",
+    "description": "JavaScript application project.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-08-16",
+    "updated": "2026-09-08"
+  },
+  {
+    "name": "Mercedes",
+    "title": "Mercedes",
+    "description": "A personal virtual assistant that takes instructions and handles day-to-day tasks.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-08-13",
+    "updated": "2026-09-03"
+  },
+  {
+    "name": "hans-designs",
+    "title": "Hans Designs",
+    "description": "Marketing site for a design studio, hand-built in HTML and CSS.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-09-02",
+    "updated": "2026-09-03"
+  },
+  {
+    "name": "deepdive",
+    "title": "DeepDive",
+    "description": "JavaScript research/reading application.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-08-15",
+    "updated": "2026-08-15"
+  },
+  {
+    "name": "interviewly",
+    "title": "Interviewly",
+    "description": "Interview practice and preparation platform, live in beta on Vercel.",
+    "category": "apps",
+    "stack": [
+      "TypeScript",
+      "Vercel"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": "https://interviewly-beta.vercel.app",
+    "created": "2026-07-29",
+    "updated": "2026-08-13"
+  },
+  {
+    "name": "pathstone",
+    "title": "Pathstone",
+    "description": "Project workspace for the Pathstone build.",
+    "category": "apps",
+    "stack": [],
+    "language": null,
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-08-09",
+    "updated": "2026-08-09"
+  },
+  {
+    "name": "nextmentor-web",
+    "title": "NextMentor Web",
+    "description": "The public web front end for NextMentor, deployed on Vercel.",
+    "category": "apps",
+    "stack": [
+      "TypeScript",
+      "Vercel"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": "https://nextmentor-web.vercel.app",
+    "created": "2026-07-21",
+    "updated": "2026-07-26"
+  },
+  {
+    "name": "NextMentor",
+    "title": "NextMentor",
+    "description": "Mentorship platform connecting mentees with mentors, the core application behind NextMentor.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-03-04",
+    "updated": "2026-06-05"
+  },
+  {
+    "name": "citea",
+    "title": "Citea",
+    "description": "Citea online store, an e-commerce front end.",
+    "category": "apps",
+    "stack": [
+      "TypeScript",
+      "E-commerce"
+    ],
+    "language": "TypeScript",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/citea",
+    "live": null,
+    "created": "2026-04-22",
+    "updated": "2026-04-22"
+  },
+  {
+    "name": "nextmentor-privacy",
+    "title": "NextMentor Privacy",
+    "description": "Standalone privacy policy and legal pages for the NextMentor product.",
+    "category": "sites",
+    "stack": [
+      "HTML"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/nextmentor-privacy",
+    "live": null,
+    "created": "2026-04-02",
+    "updated": "2026-04-02"
+  },
+  {
+    "name": "muzaattorneys",
+    "title": "Muza Attorneys",
+    "description": "Website for a law firm, built as a static, fast-loading site.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-03-25",
+    "updated": "2026-03-25"
+  },
+  {
+    "name": "inesa",
+    "title": "Inesa",
+    "description": "Corporate website build.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2026-02-25",
+    "updated": "2026-02-25"
+  },
+  {
+    "name": "pcrequests",
+    "title": "PC Requests",
+    "description": "Request-handling front end for IT hardware and support requests.",
+    "category": "apps",
+    "stack": [
+      "HTML",
+      "JavaScript"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/pcrequests",
+    "live": null,
+    "created": "2026-02-25",
+    "updated": "2026-02-25"
+  },
+  {
+    "name": "wbsonline",
+    "title": "WBS Online",
+    "description": "Online portal build for WBS.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/wbsonline",
+    "live": null,
+    "created": "2025-11-10",
+    "updated": "2025-12-10"
+  },
+  {
+    "name": "wbs-react",
+    "title": "WBS React",
+    "description": "React rebuild of the WBS front end.",
+    "category": "apps",
+    "stack": [
+      "React",
+      "HTML"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/wbs-react",
+    "live": null,
+    "created": "2025-11-21",
+    "updated": "2025-11-25"
+  },
+  {
+    "name": "tourjapan",
+    "title": "Tour Japan",
+    "description": "Travel and tour site concept for Japan trips.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-11-11",
+    "updated": "2025-11-11"
+  },
+  {
+    "name": "infinity",
+    "title": "Infinity",
+    "description": "Styling-led site build focused on layout and CSS craft.",
+    "category": "sites",
+    "stack": [
+      "CSS",
+      "HTML"
+    ],
+    "language": "CSS",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-10-06",
+    "updated": "2025-10-06"
+  },
+  {
+    "name": "ThinkSpace",
+    "title": "ThinkSpace",
+    "description": "Collaborative thinking and note workspace.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-03-31",
+    "updated": "2025-05-13"
+  },
+  {
+    "name": "FinovateX",
+    "title": "FinovateX",
+    "description": "Fintech dashboard concept covering accounts and transactions.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-03-31",
+    "updated": "2025-03-31"
+  },
+  {
+    "name": "TravelBnB",
+    "title": "TravelBnB",
+    "description": "Stay-booking application in the style of a short-let marketplace.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-03-31",
+    "updated": "2025-03-31"
+  },
+  {
+    "name": "CourseFlow",
+    "title": "CourseFlow",
+    "description": "Online learning platform for courses and lesson delivery.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-03-31",
+    "updated": "2025-03-31"
+  },
+  {
+    "name": "SkillSage",
+    "title": "SkillSage",
+    "description": "Wise mentor for skill refinement, guiding users through practising and levelling up a skill.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2025-03-03",
+    "updated": "2025-03-04"
+  },
+  {
+    "name": "dandelion-finance",
+    "title": "Dandelion Finance",
+    "description": "Personal finance site for tracking and presenting money matters.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2024-08-14",
+    "updated": "2024-08-14"
+  },
+  {
+    "name": "starter",
+    "title": "Starter",
+    "description": "Reusable project starter template used to spin up new builds.",
+    "category": "labs",
+    "stack": [],
+    "language": null,
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2024-08-14",
+    "updated": "2024-08-14"
+  },
+  {
+    "name": "Coding",
+    "title": "Coding",
+    "description": "Sandbox for coding exercises and TypeScript practice.",
+    "category": "labs",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2022-06-10",
+    "updated": "2023-11-30"
+  },
+  {
+    "name": "DoniadNel",
+    "title": "Doniad Nel",
+    "description": "Company project repository for Doniad Nel.",
+    "category": "business",
+    "stack": [],
+    "language": null,
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2023-08-29",
+    "updated": "2023-08-29"
+  },
+  {
+    "name": "SurveyTsoko",
+    "title": "SurveyTsoko",
+    "description": "A SurveyMonkey clone: build surveys, collect responses and review results.",
+    "category": "apps",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2022-10-11",
+    "updated": "2023-05-11"
+  },
+  {
+    "name": "Virtue",
+    "title": "Virtue",
+    "description": "The Virtue Company website.",
+    "category": "sites",
+    "stack": [
+      "JavaScript"
+    ],
+    "language": "JavaScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2022-12-01",
+    "updated": "2023-03-12"
+  },
+  {
+    "name": "Hatch-HRMS",
+    "title": "Hatch HRMS",
+    "description": "Human resource management system covering employee records and HR workflows.",
+    "category": "apps",
+    "stack": [],
+    "language": null,
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2022-10-21",
+    "updated": "2022-10-21"
+  },
+  {
+    "name": "furnt",
+    "title": "Furnt",
+    "description": "Custom furniture e-commerce store.",
+    "category": "apps",
+    "stack": [
+      "HTML",
+      "E-commerce"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2022-09-28",
+    "updated": "2022-09-28"
+  },
+  {
+    "name": "Demo-DC",
+    "title": "Demo DC",
+    "description": "An app used to collect form data from users.",
+    "category": "apps",
+    "stack": [
+      "TypeScript"
+    ],
+    "language": "TypeScript",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2022-06-12",
+    "updated": "2022-06-12"
+  },
+  {
+    "name": "bantubeauty",
+    "title": "Bantu Beauty",
+    "description": "BantuBeauty site built with HTML, CSS and Bootstrap.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS",
+      "Bootstrap"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/bantubeauty",
+    "live": null,
+    "created": "2021-06-30",
+    "updated": "2022-03-29"
+  },
+  {
+    "name": "landingPage",
+    "title": "Landing Page",
+    "description": "A landing page built with HTML, CSS and Bootstrap 5.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS",
+      "Bootstrap"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/landingPage",
+    "live": null,
+    "created": "2022-03-10",
+    "updated": "2022-03-10"
+  },
+  {
+    "name": "THE-DRAWING-APP",
+    "title": "The Drawing App",
+    "description": "A drawing canvas built with p5.js.",
+    "category": "labs",
+    "stack": [
+      "JavaScript",
+      "p5.js"
+    ],
+    "language": "JavaScript",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/THE-DRAWING-APP",
+    "live": null,
+    "created": "2022-03-10",
+    "updated": "2022-03-10"
+  },
+  {
+    "name": "panban",
+    "title": "Portfolio",
+    "description": "This site: my portfolio, listing every project I have built.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/panban",
+    "live": null,
+    "created": "2021-11-03",
+    "updated": "2021-11-04"
+  },
+  {
+    "name": "SectroTech",
+    "title": "SectroTech",
+    "description": "SectroTech company site, styled with SCSS.",
+    "category": "sites",
+    "stack": [
+      "SCSS",
+      "HTML"
+    ],
+    "language": "SCSS",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/SectroTech",
+    "live": null,
+    "created": "2021-08-22",
+    "updated": "2021-09-09"
+  },
+  {
+    "name": "SectroApp",
+    "title": "SectroApp",
+    "description": "The SectroTech desktop app, built with Electron.",
+    "category": "apps",
+    "stack": [
+      "Electron"
+    ],
+    "language": null,
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2021-08-31",
+    "updated": "2021-08-31"
+  },
+  {
+    "name": "ZalEmpire-2021",
+    "title": "Zal Empire",
+    "description": "Website build for Zal Empire.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/ZalEmpire-2021",
+    "live": null,
+    "created": "2021-02-17",
+    "updated": "2021-08-23"
+  },
+  {
+    "name": "firm.",
+    "title": "Firm (v2)",
+    "description": "Second pass at the professional firm website layout.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2021-06-30",
+    "updated": "2021-06-30"
+  },
+  {
+    "name": "type-store",
+    "title": "Type Store",
+    "description": "type-store website made with WordPress.",
+    "category": "business",
+    "stack": [
+      "WordPress",
+      "PHP"
+    ],
+    "language": "PHP",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2021-06-23",
+    "updated": "2021-06-23"
+  },
+  {
+    "name": "C-C-",
+    "title": "C&C Cafe",
+    "description": "Website for C&C Cafe.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": null,
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2021-05-08",
+    "updated": "2021-05-08"
+  },
+  {
+    "name": "sixthfusetechnologies",
+    "title": "Sixth Fuse Technologies",
+    "description": "Sixth Fuse Tech website, 2021 update, made with HTML, CSS and Bootstrap.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS",
+      "Bootstrap"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/sixthfusetechnologies",
+    "live": null,
+    "created": "2021-04-29",
+    "updated": "2021-04-29"
+  },
+  {
+    "name": "firm",
+    "title": "Firm",
+    "description": "Professional firm website build.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/firm",
+    "live": null,
+    "created": "2021-03-04",
+    "updated": "2021-03-04"
+  },
+  {
+    "name": "lawfirm",
+    "title": "Law Firm",
+    "description": "Law firm website with a sidebar navigation layout.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2021-03-01",
+    "updated": "2021-03-03"
+  },
+  {
+    "name": "template",
+    "title": "Template",
+    "description": "Base HTML template used across client site builds.",
+    "category": "labs",
+    "stack": [
+      "HTML"
+    ],
+    "language": "HTML",
+    "private": true,
+    "repo": null,
+    "live": null,
+    "created": "2021-02-28",
+    "updated": "2021-02-28"
+  },
+  {
+    "name": "innovate-safety",
+    "title": "Innovate Safety",
+    "description": "Demo homepage for Innovate Safety.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/innovate-safety",
+    "live": null,
+    "created": "2021-02-13",
+    "updated": "2021-02-13"
+  },
+  {
+    "name": "fitness-goals",
+    "title": "Fitness Goals",
+    "description": "Fitness goal tracking page build.",
+    "category": "sites",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/fitness-goals",
+    "live": null,
+    "created": "2021-02-01",
+    "updated": "2021-02-01"
+  },
+  {
+    "name": "Chat-Room",
+    "title": "Chat Room",
+    "description": "A browser chat room build, one of my first web projects.",
+    "category": "labs",
+    "stack": [
+      "HTML",
+      "JavaScript"
+    ],
+    "language": "HTML",
+    "private": false,
+    "repo": "https://github.com/iAmPanBan/Chat-Room",
+    "live": null,
+    "created": "2020-12-08",
+    "updated": "2020-12-08"
+  }
+]

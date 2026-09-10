@@ -3,747 +3,183 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panashe Banhire — Web Developer &amp; Computer Engineer</title>
+  <meta name="description" content="Portfolio of Panashe Banhire, a front-end and WordPress developer and computer engineer in Harare, Zimbabwe. Every project I have built, from 2020 to today.">
+  <meta name="author" content="Panashe Banhire">
 
-  <title>PanBan Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Panashe Banhire — Web Developer &amp; Computer Engineer">
+  <meta property="og:description" content="Every project I have built, from 2020 to today.">
+  <meta property="og:url" content="https://panban.netlify.app">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/65613500?v=4">
+  <meta name="twitter:card" content="summary">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0f14'/><text x='50' y='68' font-size='54' font-family='system-ui,sans-serif' font-weight='700' fill='%234ade80' text-anchor='middle'>P</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="page-top">
+<body>
+  <a class="skip-link" href="#projects">Skip to projects</a>
 
-  <!-- ======= Header/ Navbar ======= -->
-  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Panashe Banhire</a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">PB</span>
+        <span class="brand-name">Panashe Banhire</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <span aria-hidden="true" data-theme-icon>◐</span>
       </button>
-      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
-          </li>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Harare, Zimbabwe · Available for remote work</p>
+          <h1>I build the web, and I keep it running.</h1>
+          <p class="lead">
+            Front-end and WordPress developer, computer engineer, and the person who also handles
+            all things IT. Since 2020 I have shipped <strong data-count-projects>50</strong> projects —
+            client sites, product apps, internal tools and the odd experiment. They are all below.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See the work</a>
+            <a class="btn" href="mailto:panashebanhire@gmail.com">Get in touch</a>
+          </div>
+          <ul class="hero-links">
+            <li><a href="https://github.com/iAmPanBan" rel="noopener">GitHub</a></li>
+            <li><a href="https://twitter.com/PanBan03" rel="noopener">Twitter</a></li>
+            <li><a href="mailto:panashebanhire@gmail.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/65613500?v=4" alt="Panashe Banhire" width="120" height="120" loading="eager">
+          <dl class="stats">
+            <div><dt>Projects</dt><dd data-count-projects>50</dd></div>
+            <div><dt>Building since</dt><dd>2020</dd></div>
+            <div><dt>Languages</dt><dd data-count-langs>7</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2 class="section-title"><span class="num">01</span> About</h2>
+        <div class="about-grid">
+          <p class="about-lead">
+            I am a web app developer who also does all things IT. That means I can take a product
+            from a blank repository to a deployed, maintained system — and then keep the machines,
+            networks and accounts behind it healthy too.
+          </p>
+          <div class="about-body">
+            <p>
+              Most of my work sits in two places. On the product side I build applications in
+              TypeScript and React — mentorship platforms, interview prep tools, learning
+              systems, finance dashboards and internal trackers. On the client side I build fast,
+              accessible websites for firms, studios and small businesses, in plain HTML and CSS
+              or on WordPress when the client needs to edit it themselves.
+            </p>
+            <p>
+              I work end to end: design implementation, front-end engineering, deployment on
+              Vercel or Netlify, and the IT support that keeps it all standing. I am open to
+              collaborations and remote work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <h2 class="section-title"><span class="num">02</span> Projects</h2>
+        <p class="section-note">
+          Every project I have made, newest first — pulled from my GitHub. Repositories that are
+          private are marked; where a project is live, the link goes to the running site.
+        </p>
+
+        <div class="filters">
+          <div class="search-field">
+            <label class="sr-only" for="project-search">Search projects</label>
+            <input id="project-search" type="search" placeholder="Search projects, tech, year…" autocomplete="off">
+          </div>
+          <div class="chips" role="group" aria-label="Filter projects by type">
+            <button class="chip is-active" data-filter="all" type="button">All</button>
+            <button class="chip" data-filter="apps" type="button">Apps &amp; Products</button>
+            <button class="chip" data-filter="sites" type="button">Websites</button>
+            <button class="chip" data-filter="business" type="button">Client &amp; Business</button>
+            <button class="chip" data-filter="labs" type="button">Experiments</button>
+          </div>
+        </div>
+
+        <p class="result-count" id="result-count" role="status"></p>
+        <div class="project-grid" id="project-grid"></div>
+        <p class="empty" id="empty-state" hidden>No projects match that search.</p>
+        <p class="grid-foot">
+          More on <a href="https://github.com/iAmPanBan?tab=repositories" rel="noopener">github.com/iAmPanBan</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <h2 class="section-title"><span class="num">03</span> Stack</h2>
+        <div class="stack-grid">
+          <article class="stack-card">
+            <h3>Front-end</h3>
+            <ul><li>TypeScript &amp; JavaScript</li><li>React &amp; Next.js</li><li>HTML5, CSS3, Sass</li><li>Bootstrap &amp; Tailwind</li><li>Responsive, accessible UI</li></ul>
+          </article>
+          <article class="stack-card">
+            <h3>Platforms</h3>
+            <ul><li>WordPress &amp; PHP</li><li>Vercel &amp; Netlify</li><li>Electron desktop apps</li><li>REST APIs &amp; integrations</li><li>Git &amp; GitHub workflows</li></ul>
+          </article>
+          <article class="stack-card">
+            <h3>IT &amp; Systems</h3>
+            <ul><li>Hardware &amp; asset management</li><li>Windows &amp; Linux support</li><li>Networking &amp; setup</li><li>Accounts, email &amp; DNS</li><li>Backups and recovery</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-contact" id="contact">
+      <div class="wrap contact-inner">
+        <h2 class="section-title"><span class="num">04</span> Contact</h2>
+        <p class="contact-lead">Have something to build, or something that needs fixing? Send me a line.</p>
+        <a class="btn btn-primary btn-lg" href="mailto:panashebanhire@gmail.com">panashebanhire@gmail.com</a>
+        <ul class="contact-links">
+          <li><a href="https://github.com/iAmPanBan" rel="noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/PanBan03" rel="noopener">Twitter</a></li>
+          <li><span>Harare, Zimbabwe</span></li>
         </ul>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Panashe Banhire</p>
+      <p><a href="#top">Back to top ↑</a></p>
     </div>
-  </nav>
+  </footer>
 
-  <!-- ======= Intro Section ======= -->
-  <div id="home" class="intro route bg-image" style="background-image: url(assets/img/intro-bg.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">I am Panashe Banhire</h1>
-          <p class="intro-subtitle" style="text-decoration:#0492c2 underline;"><span class="text-slider-items">Front-End Developer,Desktop App Developer,Mobile App Developer,Computer Engineer</span><strong class="text-slider"></strong></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-        </div>
-      </div>
-    </div>
-  </div><!-- End Intro Section -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/profile-img.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Panashe Banhire</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Front-End Developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>dev@panban.co.zw</span></p>
-                        <p><span class="title-s">Phone: </span> <span>(+263)779 101 305</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>Web Development</span> <span class="pull-right">85%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Desktop App Development</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Mobile App Development</span> <span class="pull-right">70%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PC Hardware</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                     Hi!
-                     I'm Panashe Banhire. I'm an ABMA certified Computer Engineer and a self taught Front-End Developer from Harare, Zimbabwe.
-                     Web and Mobile App Development is my passion.
-                    </p>
-                    <p class="lead">
-                      I have 2+ years of experience in the Development industry, with a bias towards web and mobile app development and
-                      I also love tinkering with computer hardware and have 3+ years of experience as a computer hardware technician.                      
-                    </p>
-                    <p class="lead">
-                      The programming languages and frameworks that l am familiar with and regard myself as proficient in, 
-                      are HTML5 and CSS3, Bootstrap4, Javascript, Electron, and React.
-                      I have developed websites and applications in both a collaborative, remote setup and produced quality work whilst working solo. 
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="service" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <p class="subtitle-a">
-                Services on offer
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-monitor"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Desktop App Development</h2>
-                <p class="s-description text-center">
-                  Get a custom built desktop app to make your work easy or to share your with the world!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-code-working"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                  Push your brand online with a responsive website that is especially developed run smoothly to look 
-                  good on all screen sizes
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Mobile App Development</h2>
-                <p class="s-description text-center">
-                  IOS only? Android only? Both? For Native and Hybrid mobile apps, 
-                  gimme a buzz and consider it done!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Project Management</h2>
-                <p class="s-description text-center">
-                  Need a project managed but don't have the time or experience?
-                  I will manage your whole project within scope and budget.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">IT Consultancy</h2>
-                <p class="s-description text-center">
-                  Get professional IT consultancy services at a fraction of the cost of maintaining a full-time IT department.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-laptop"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Computer Services</h2>
-                <p class="s-description text-center">
-                  Quality services on offer: maintenance, repairs, custom pc building,computer supplies etc
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">29</p>
-                <span class="counter-text">WORKS COMPLETED</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">4</p>
-                <span class="counter-text">YEARS OF EXPERIENCE</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ios-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">22</p>
-                <span class="counter-text">TOTAL CLIENTS</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-              </div>
-              <div class="counter-num">
-                <p class="counter">0</p>
-                <span class="counter-text">AWARDS WON</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Portfolio
-              </h3>
-              <p class="subtitle-a">
-                Checkout some of my completed works
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/sift-1.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Sixth Fuse Technologies</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">10 Jan. 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-2.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/a-one-2.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">A-one Gearboxes</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Jul. 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-3.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/wesell-1.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">WeSell</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">16 Jan. 2021</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-4.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/shasha-1.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Shasha Tobacco</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">10 Feb. 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-5.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/type-store-1.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">type-Store</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Jun. 2021</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
-                <div class="work-img">
-                  <img src="assets/img/sectroapp-1.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">SectroApp</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Desktop App</span> / <span class="w-date">01 Aug. 2021</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div id="testimonial-mf" class="owl-carousel owl-theme">
-              <div class="testimonial-box">
-                <div class="author-test">
-                  <img src="assets/img/escalade.jpg" alt="" class="rounded-circle b-shadow-a">
-                  <span class="author">Eric Zamani</span>
-                </div>
-                <div class="content-test">
-                  <p class="description lead">
-                    "The ZalEmpire website is just what I was looking for. I would like to personally thank Panashe for his outstanding work."
-                  </p>
-                  <span class="comit"><i class="fa fa-quote-right"></i></span>
-                </div>
-              </div>
-              <div class="testimonial-box">
-                <div class="author-test">
-                  <img src="assets/img/ray.jpg" alt="" class="rounded-circle b-shadow-a">
-                  <span class="author">Raymond Hinze</span>
-                </div>
-                <div class="content-test">
-                  <p class="description lead">
-                    "I am so happy with our website(a1gearboxes). Panashe is the real deal! I am so pleased with his work. We have no regrets!"
-                  </p>
-                  <span class="comit"><i class="fa fa-quote-right"></i></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Testimonials Section -->
-
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Blog
-              </h3>
-              <p class="subtitle-a">
-                Take a look at my Blog. Stay updated and informed.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"><img src="assets/img/seo.jpg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">SEO</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="blog-single.html">Tips for Designing an SEO Friendly Website in 2021</a></h3>
-                <p class="card-description">
-                  If you want to increase your business’s internet traffic, you must build an SEO-friendly website. 
-                  When your website is search engine friendly...<br>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img src="assets/img/profile-img.jpg" alt="" class="avatar rounded-circle">
-                    <span class="author">Panashe Banhire</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 40 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"><img src="assets/img/techsupport.jpg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Tech Support</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="blog-single.html">Importance of Remote Tech Support.</a></h3>
-                <p class="card-description">
-                  Remote Assistance is often fully utilized in foreign countries by big organisations.
-                  In Zimbabwe, it is not often... 
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img src="assets/img/profile-img.jpg" alt="" class="avatar rounded-circle">
-                    <span class="author">Panashe Banhire</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"><img src="assets/img/setup2.jpg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Work From Home</h6>
-                  </div>
-                </div>
-                <h3 class="card-title"><a href="blog-single.html">Setting up the perfect home office.</a></h3>
-                <p class="card-description">
-                How can I setup a home office?
-                Working from home is hardly a new phenomenon, but the COVID-19 pandemic has made it an...
-                <br>
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img src="assets/img/profile-img.jpg" alt="" class="avatar rounded-circle">
-                    <span class="author">Panashe Banhire</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 28 min
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Blog Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Send Message Us
-                      </h5>
-                    </div>
-                    <div>
-                      <form  action="https://formspree.io/f/xwkwanar" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                              <div class="validate"></div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center mb-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        For any inquiries on the services I offer, do feel free to hit me up and get a free quote!
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="ion-ios-location"></span> 5-61<sup>st</sup>Avenue, Haig Park, Mabelreign</li>
-                        <li><span class="ion-ios-telephone"></span> (+263)779 101 305</li>
-                        <li><span class="ion-email"></span> panashebanhire@gmail.com</li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://www.facebook.com/panashe.banhire"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                        <li><a href="https://www.instagram.com/panach18"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                        <li><a href="https://twitter.com/panban03"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                        <li><a href="https://github.com/Nabel03"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>PanBan</strong>. All Rights Reserved</p>
-            <div class="credits">
-              Designed by <a href="https://panban.co.zw/">Panashe Banhire</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/jquery.counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
