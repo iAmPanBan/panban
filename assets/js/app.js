@@ -6,14 +6,26 @@
   "use strict";
 
   var GITHUB_USER = "iAmPanBan";
+  var DEFAULT_CATEGORY = "apps";
+
   var grid = document.getElementById("project-grid");
   var searchInput = document.getElementById("project-search");
   var countEl = document.getElementById("result-count");
   var emptyEl = document.getElementById("empty-state");
+  var progressEl = document.getElementById("progress");
   var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
 
   var projects = [];
-  var state = { filter: "all", query: "" };
+  var state = { filter: DEFAULT_CATEGORY, query: "" };
+
+  var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var LABELS = {
+    apps: "Apps & Products",
+    sites: "Websites",
+    business: "Client & Business",
+    labs: "Experiments"
+  };
 
   /* ----- theme ----- */
 
@@ -35,13 +47,19 @@
     });
   }
 
-  /* ----- header shadow ----- */
+  /* ----- scroll: header state and progress bar ----- */
 
   var header = document.querySelector(".site-header");
-  var onScroll = function () {
+  function onScroll() {
     header.classList.toggle("is-stuck", window.scrollY > 8);
-  };
+    if (progressEl) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      progressEl.style.transform = "scaleX(" + ratio + ")";
+    }
+  }
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
   onScroll();
 
   var yearEl = document.getElementById("year");
@@ -63,29 +81,51 @@
   function haystack(project) {
     return [
       project.title, project.name, project.description, project.category,
-      project.language, year(project)
+      LABELS[project.category], project.language, year(project)
     ].concat(project.stack || []).join(" ").toLowerCase();
+  }
+
+  /* ----- count-up figures ----- */
+
+  function countUp(el, target) {
+    var plain = el.hasAttribute("data-plain");
+    var format = function (n) { return plain ? String(n) : String(n); };
+    if (calm) { el.textContent = format(target); return; }
+
+    var start = performance.now();
+    var duration = 900;
+    (function step(now) {
+      var t = Math.min((now - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = format(Math.round(target * eased));
+      if (t < 1) { requestAnimationFrame(step); }
+    })(start);
   }
 
   /* ----- rendering ----- */
 
-  function cardMarkup(project) {
+  function cardMarkup(project, index) {
     var tags = (project.stack || []).slice(0, 4).map(function (tag) {
       return '<li class="tag">' + esc(tag) + "</li>";
     }).join("");
 
     var links = [];
     if (project.live) {
-      links.push('<a href="' + esc(project.live) + '" rel="noopener" target="_blank">Live site ↗</a>');
+      links.push('<a href="' + esc(project.live) + '" rel="noopener" target="_blank">' +
+        'Live site <span class="arrow" aria-hidden="true">↗</span></a>');
     }
     if (project.repo) {
-      links.push('<a href="' + esc(project.repo) + '" rel="noopener" target="_blank">Code ↗</a>');
+      links.push('<a href="' + esc(project.repo) + '" rel="noopener" target="_blank">' +
+        'Code <span class="arrow" aria-hidden="true">↗</span></a>');
     }
     if (project.private) {
       links.push('<span class="lock">Private repository</span>');
     }
 
-    return '<article class="card" data-category="' + esc(project.category) + '">' +
+    var delay = calm ? 0 : Math.min(index, 14) * 0.045;
+
+    return '<article class="card" data-category="' + esc(project.category) + '"' +
+      ' style="animation-delay:' + delay.toFixed(3) + 's">' +
       '<div class="card-top">' +
         '<h3 class="card-title">' + esc(project.title) + "</h3>" +
         '<span class="card-year">' + esc(year(project)) + "</span>" +
@@ -98,15 +138,25 @@
 
   function render() {
     var q = state.query.trim().toLowerCase();
+    var searching = q.length > 0;
+
+    // A search looks across every category; browsing stays inside the chosen one.
     var visible = projects.filter(function (project) {
-      var matchesFilter = state.filter === "all" || project.category === state.filter;
-      var matchesQuery = !q || haystack(project).indexOf(q) !== -1;
-      return matchesFilter && matchesQuery;
+      if (searching) { return haystack(project).indexOf(q) !== -1; }
+      return project.category === state.filter;
     });
 
     grid.innerHTML = visible.map(cardMarkup).join("");
     emptyEl.hidden = visible.length !== 0;
-    countEl.textContent = visible.length + " of " + projects.length + " projects";
+
+    countEl.textContent = searching
+      ? visible.length + " of " + projects.length + " projects match “" + q + "”"
+      : visible.length + " " + (LABELS[state.filter] || "projects").toLowerCase() +
+        " · " + projects.length + " projects in total";
+
+    chips.forEach(function (chip) {
+      chip.classList.toggle("is-dimmed", searching);
+    });
   }
 
   function updateCounts() {
@@ -114,10 +164,25 @@
     projects.forEach(function (p) { if (p.language) { langs[p.language] = true; } });
 
     Array.prototype.forEach.call(document.querySelectorAll("[data-count-projects]"), function (el) {
-      el.textContent = String(projects.length);
+      if (el.hasAttribute("data-countup")) { countUp(el, projects.length); }
+      else { el.textContent = String(projects.length); }
     });
     var langEl = document.querySelector("[data-count-langs]");
-    if (langEl) { langEl.textContent = String(Object.keys(langs).length); }
+    if (langEl) { countUp(langEl, Object.keys(langs).length); }
+    var sinceEl = document.querySelector("[data-plain]");
+    if (sinceEl) { countUp(sinceEl, 2020); }
+  }
+
+  /* ----- pointer spotlight on cards ----- */
+
+  if (!calm) {
+    grid.addEventListener("pointermove", function (event) {
+      var card = event.target.closest ? event.target.closest(".card") : null;
+      if (!card) { return; }
+      var box = card.getBoundingClientRect();
+      card.style.setProperty("--mx", (event.clientX - box.left) + "px");
+      card.style.setProperty("--my", (event.clientY - box.top) + "px");
+    });
   }
 
   /* ----- live GitHub enrichment (public repos only) ----- */
@@ -170,6 +235,7 @@
       chips.forEach(function (c) { c.classList.remove("is-active"); });
       chip.classList.add("is-active");
       state.filter = chip.getAttribute("data-filter");
+      if (state.query) { state.query = ""; searchInput.value = ""; }
       render();
     });
   });

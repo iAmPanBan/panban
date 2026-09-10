@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/65613500?v=4">
   <meta name="twitter:card" content="summary">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230c1618'/><text x='50' y='68' font-size='54' font-family='system-ui,sans-serif' font-weight='700' fill='%23e9a13b' text-anchor='middle'>P</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0918'/><text x='50' y='68' font-size='54' font-family='system-ui,sans-serif' font-weight='700' fill='%238b7bff' text-anchor='middle'>P</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
 </head>
 
 <body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
   <a class="skip-link" href="#projects">Skip to projects</a>
 
   <header class="site-header" id="top">
@@ -46,31 +47,34 @@
   <main>
     <!-- Hero -->
     <section class="hero">
+      <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Harare, Zimbabwe · Available for remote work</p>
-          <h1>I build the web, and I keep it running.</h1>
-          <p class="lead">
+          <p class="eyebrow" data-rise style="animation-delay:.05s">
+            <span class="pulse" aria-hidden="true"></span>Harare, Zimbabwe · Available for remote work
+          </p>
+          <h1 data-rise style="animation-delay:.12s">I build the web, and <span class="grad-text">I keep it running.</span></h1>
+          <p class="lead" data-rise style="animation-delay:.2s">
             Front-end and WordPress developer, computer engineer, and the person who also handles
             all things IT. Since 2020 I have shipped <strong data-count-projects>50</strong> projects —
             client sites, product apps, internal tools and the odd experiment. They are all below.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions" data-rise style="animation-delay:.28s">
             <a class="btn btn-primary" href="#projects">See the work</a>
             <a class="btn" href="mailto:panashebanhire@gmail.com">Get in touch</a>
           </div>
-          <ul class="hero-links">
+          <ul class="hero-links" data-rise style="animation-delay:.36s">
             <li><a href="https://github.com/iAmPanBan" rel="noopener">GitHub</a></li>
             <li><a href="https://twitter.com/PanBan03" rel="noopener">Twitter</a></li>
             <li><a href="mailto:panashebanhire@gmail.com">Email</a></li>
           </ul>
         </div>
-        <div class="hero-card">
+        <div class="hero-card" data-rise style="animation-delay:.44s">
           <img class="avatar" src="https://avatars.githubusercontent.com/u/65613500?v=4" alt="Panashe Banhire" width="120" height="120" loading="eager">
           <dl class="stats">
-            <div><dt>Projects</dt><dd data-count-projects>50</dd></div>
-            <div><dt>Building since</dt><dd>2020</dd></div>
-            <div><dt>Languages</dt><dd data-count-langs>7</dd></div>
+            <div><dt>Projects</dt><dd data-count-projects data-countup>50</dd></div>
+            <div><dt>Building since</dt><dd data-countup data-plain>2020</dd></div>
+            <div><dt>Languages</dt><dd data-count-langs data-countup>7</dd></div>
           </dl>
         </div>
       </div>
@@ -109,8 +113,9 @@
       <div class="wrap">
         <h2 class="section-title"><span class="num">02</span> Projects</h2>
         <p class="section-note">
-          Every project I have made, newest first — pulled from my GitHub. Repositories that are
-          private are marked; where a project is live, the link goes to the running site.
+          Every project I have made, by category and newest first — pulled from my GitHub. Pick a
+          category below, or search across all of them. Private repositories are marked; where a
+          project is live, the link goes to the running site.
         </p>
 
         <div class="filters">
@@ -119,8 +124,7 @@
             <input id="project-search" type="search" placeholder="Search projects, tech, year…" autocomplete="off">
           </div>
           <div class="chips" role="group" aria-label="Filter projects by type">
-            <button class="chip is-active" data-filter="all" type="button">All</button>
-            <button class="chip" data-filter="apps" type="button">Apps &amp; Products</button>
+            <button class="chip is-active" data-filter="apps" type="button">Apps &amp; Products</button>
             <button class="chip" data-filter="sites" type="button">Websites</button>
             <button class="chip" data-filter="business" type="button">Client &amp; Business</button>
             <button class="chip" data-filter="labs" type="button">Experiments</button>
