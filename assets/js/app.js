@@ -173,17 +173,158 @@
     if (sinceEl) { countUp(sinceEl, 2020); }
   }
 
-  /* ----- pointer spotlight on cards ----- */
+  /* ----- head tracking: surfaces turn toward the pointer ----- */
+
+  function track(el, event, maxDeg) {
+    var box = el.getBoundingClientRect();
+    var px = (event.clientX - box.left) / box.width - 0.5;
+    var py = (event.clientY - box.top) / box.height - 0.5;
+    el.style.setProperty("--ry", (px * maxDeg).toFixed(2) + "deg");
+    el.style.setProperty("--rx", (-py * maxDeg).toFixed(2) + "deg");
+    el.classList.add("is-tracking");
+  }
+
+  function release(el) {
+    el.style.setProperty("--rx", "0deg");
+    el.style.setProperty("--ry", "0deg");
+    el.classList.remove("is-tracking");
+  }
 
   if (!calm) {
     grid.addEventListener("pointermove", function (event) {
       var card = event.target.closest ? event.target.closest(".card") : null;
-      if (!card) { return; }
-      var box = card.getBoundingClientRect();
-      card.style.setProperty("--mx", (event.clientX - box.left) + "px");
-      card.style.setProperty("--my", (event.clientY - box.top) + "px");
+      if (card) { track(card, event, 7); }
     });
+    grid.addEventListener("pointerout", function (event) {
+      var card = event.target.closest ? event.target.closest(".card") : null;
+      if (card && !card.contains(event.relatedTarget)) { release(card); }
+    });
+
+    var heroCard = document.querySelector(".hero-card");
+    var hero = document.querySelector(".hero");
+    if (heroCard && hero) {
+      heroCard.classList.add("tilt");
+      hero.addEventListener("pointermove", function (event) { track(heroCard, event, 5); });
+      hero.addEventListener("pointerleave", function () { release(heroCard); });
+    }
   }
+
+  /* ----- the horizon grid behind the hero ----- */
+
+  (function horizonGrid() {
+    var canvas = document.getElementById("grid-field");
+    if (!canvas) { return; }
+    var ctx = canvas.getContext("2d");
+    var W = 0, H = 0, running = false, offset = 0, last = 0;
+
+    function readColor(name, alpha) {
+      var raw = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      var hex = raw.replace("#", "");
+      if (hex.length === 3) { hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]; }
+      var n = parseInt(hex, 16);
+      if (isNaN(n)) { return "rgba(128,128,160," + alpha + ")"; }
+      return "rgba(" + ((n >> 16) & 255) + "," + ((n >> 8) & 255) + "," + (n & 255) + "," + alpha + ")";
+    }
+
+    function resize() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var box = canvas.getBoundingClientRect();
+      W = box.width; H = box.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      draw();
+    }
+
+    function draw() {
+      if (!W || !H) { return; }
+      ctx.clearRect(0, 0, W, H);
+
+      var horizon = H * 0.62;
+      var vx = W * 0.5;
+      var floor = readColor("--accent", 0.5);
+      var rail = readColor("--accent-2", 0.42);
+      var rows = 22;
+      var cols = 15;
+
+      ctx.lineWidth = 1;
+
+      // rails converging on the vanishing point
+      ctx.strokeStyle = rail;
+      for (var c = -cols; c <= cols; c++) {
+        var spread = (c / cols) * W * 1.6;
+        ctx.globalAlpha = 0.16 + 0.2 * (1 - Math.abs(c) / cols);
+        ctx.beginPath();
+        ctx.moveTo(vx, horizon);
+        ctx.lineTo(vx + spread, H);
+        ctx.stroke();
+      }
+
+      // rungs rushing toward the viewer
+      ctx.strokeStyle = floor;
+      for (var i = 0; i < rows; i++) {
+        var z = i + offset;
+        var y = horizon + (H * 0.28) / (z * 0.42 + 0.42);
+        if (y > H + 2) { continue; }
+        ctx.globalAlpha = Math.max(0, 0.4 * (1 - i / rows));
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(W, y);
+        ctx.stroke();
+      }
+
+      // the horizon itself
+      ctx.globalAlpha = 0.5;
+      ctx.strokeStyle = rail;
+      ctx.beginPath();
+      ctx.moveTo(0, horizon);
+      ctx.lineTo(W, horizon);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    function frame(now) {
+      if (!running) { return; }
+      var dt = last ? Math.min((now - last) / 1000, 0.05) : 0;
+      last = now;
+      offset = (offset + dt * 0.55) % 1;
+      draw();
+      requestAnimationFrame(frame);
+    }
+
+    resize();
+    window.addEventListener("resize", resize);
+
+    // repaint when the palette flips
+    new MutationObserver(draw).observe(document.documentElement, {
+      attributes: true, attributeFilter: ["data-theme"]
+    });
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
+
+    if (calm) { return; }
+
+    // only run while the hero is on screen
+    new IntersectionObserver(function (entries) {
+      var visible = entries[0].isIntersecting;
+      if (visible && !running) { running = true; last = 0; requestAnimationFrame(frame); }
+      else if (!visible) { running = false; }
+    }).observe(canvas);
+  })();
+
+  /* ----- boot sequence ----- */
+
+  (function bootSequence() {
+    var visor = document.getElementById("visor");
+    if (calm) {
+      document.body.classList.remove("booting");
+      if (visor) { visor.remove(); }
+      return;
+    }
+    window.setTimeout(function () {
+      document.body.classList.remove("booting");
+      if (visor) { visor.remove(); }
+    }, 1400);
+  })();
 
   /* ----- live GitHub enrichment (public repos only) ----- */
 
