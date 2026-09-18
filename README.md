@@ -1,6 +1,6 @@
-# panban — portfolio
+# panban portfolio
 
-Personal portfolio for **Panashe Banhire** — web app developer, WordPress developer and
+Personal portfolio for **Panashe Banhire**, web app developer, WordPress developer and
 computer engineer in Harare, Zimbabwe. Live at <https://panban.netlify.app>.
 
 The site is a single static page listing every project I have built, sourced from my GitHub.
@@ -11,7 +11,7 @@ The site is a single static page listing every project I have built, sourced fro
 index.html            the whole page
 assets/css/style.css  styles (light + dark, no framework)
 assets/js/app.js      project rendering, search, filters, theme, GitHub sync
-data/projects.json    the project list — edit this to change the portfolio
+data/projects.json    the project list, edit this to change the portfolio
 ```
 
 No build step, no dependencies. It is plain HTML, CSS and JavaScript.

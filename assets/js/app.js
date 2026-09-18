@@ -1,4 +1,4 @@
-/* Panashe Banhire — portfolio behaviour
+/* Panashe Banhire portfolio behaviour
    Projects are loaded from data/projects.json, then enriched from the public
    GitHub API so the site stays current as repositories are pushed. */
 
@@ -351,7 +351,7 @@
             projects.push({
               name: repo.name,
               title: repo.name.replace(/[-_]+/g, " "),
-              description: repo.description || "Recent project — see the repository for details.",
+              description: repo.description || "Recent project. See the repository for details.",
               category: "labs",
               stack: repo.language ? [repo.language] : [],
               language: repo.language,
@@ -366,7 +366,7 @@
 
         projects.sort(function (a, b) { return (b.updated || "").localeCompare(a.updated || ""); });
       })
-      .catch(function () { /* offline or rate limited — the bundled data stands */ });
+      .catch(function () { /* offline or rate limited, so the bundled data stands */ });
   }
 
   /* ----- events ----- */
